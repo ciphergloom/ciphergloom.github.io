@@ -1,146 +1,83 @@
+/* Theme colors */
 :root {
-  --primary-color: #c37d45; /* Earthy terracotta */
+  --primary-color: #8d7046; /* Earthy brown */
   --secondary-color: #f5f5f5; /* Light beige */
-  --accent-color: #53a0b4; /* Muted teal */
+  --accent-color: #37a0b4; /* Cool teal */
 }
 
 body {
-  font-family: "Noto Sans JP", "Hiragino Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background-color: var(--secondary-color);
   margin: 0;
   padding: 0;
-}
-
-... (other styles adjusted slightly)
-
-header {
-  padding: 3rem 0; /* Increased padding for airiness */
-}
-
-main {
-  padding: 2.5rem; /* Adjust padding as needed */
-}
-
-#search {
-  padding: 1.5rem; /* Adjusted padding */
-  border-radius: 8px; /* Rounded corners */
-}
-
-footer {
-  padding: 1.5rem 0; /* Adjusted padding */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Lighter shadow */
-}
-
-/* ... other sections with similar adjustments */
-
-@media (max-width: 768px) {
-  /* Adapt responsive styles for modern layouts */
-}
-CSS
-
-/* Opportunities section styles */
-
-#opportunities {
-  padding: 2rem 0;
-  background-color: #f5f5f5;
-}
-
-#opportunities h2 {
   text-align: center;
-  margin-bottom: 1rem;
 }
 
-#opportunities p {
-  text-align: center;
-  font-size: 16px;
-  margin-bottom: 2rem;
+/* Common button styles */
+button {
+  /* ... (styles from previous response) */
 }
 
-.search-bar {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.search-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.search-group label {
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.search-group input,
-.search-group select {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 0.75rem 1rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #0062cc;
-}
-
-.featured-listings {
-  margin-top: 2rem;
-}
-
-.featured-listings h3 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.featured-listings li {
+/* 3-column layout */
+.center-flex {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 0.5rem;
+  /* Optional margin for spacing: margin: 0 1rem; */
 }
 
-.featured-listings li a {
-  color: #007bff;
+.column {
+  flex: 1; /* Divide equally among columns */
+  padding: 1rem;
+  /* Optional background color to distinguish sections: background-color: #fafafa; */
+}
+
+/* Header */
+header {
+  padding: 2rem;
+  /* Use theme colors and centering: */
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: #fff;
   text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease-in-out;
 }
 
-.featured-listings li p {
-  font-size: 14px;
+nav a:hover {
+  background-color: darken(var(--primary-color), 10%);
 }
 
-.button-explore {
-  display: block;
-  margin: 2rem auto;
+/* Footer */
+footer {
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
 }
 
 /* Media queries for responsiveness */
-
 @media (max-width: 768px) {
-  .search-bar {
+  .center-flex {
     flex-direction: column;
-    gap: 1rem;
   }
-  .search-group {
-    margin-bottom: 1rem;
-  }
-  .featured-listings li {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .featured-listings li p {
-    margin-top: 0.5rem;
+  .column {
+    flex: none;
+    width: 100%;
   }
 }

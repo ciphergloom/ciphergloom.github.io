@@ -4,36 +4,53 @@
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Work Exchange Platform - Opportunities</title>
+  <title>Opportunities - My Work Exchange Platform</title>
 </head>
-  <body>
-  <main>
-    <section id="search">
-      <h2>Find Your Perfect Work Exchange</h2>
-      <form action="#">
-        <div class="search-group">
-          <label for="location">Location:</label>
-          <input type="text" id="location" name="location" placeholder="Enter a city or country">
-        </div>
-        <div class="search-group">
-          <label for="work_type">Work Type:</label>
-          <select id="work_type" name="work_type">
-            <option value="">Select an option</option>
-            </select>
-        </div>
-        <div class="search-group">
-          <label for="skills">Skills:</label>
-          <input type="text" id="skills" name="skills" placeholder="Enter your skills (optional)">
-        </div>
-        <button type="submit">Search</button>
-      </form>
+<body>
+  <header class="center">
+    <h1>My Work Exchange Platform</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="opportunities.html">Opportunities</a></li>
+        <li><a href="become-host.html">Become a Host</a></li>
+        <li><a href="become-volunteer.html">Become a Volunteer</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="center-flex"> 
+    <section class="column">
+      <h2>Latest Opportunities</h2>
+      <ul id="listings">
+        </ul>
     </section>
-    <section id="listings">
-      <h2>Featured Opportunities</h2>
-      </section>
+    <section class="column">
+      <div id="search">
+        <h2>Find Your Perfect Opportunity</h2>
+        <form>
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter city or region">
+          <label for="category">Category:</label>
+          <select id="category" name="category">
+            <option value="">All Categories</option>
+            </select>
+          <button class="primary-button">Search</button>
+        </form>
+      </div>
+    </section>
+    <section class="column">
+      <h2>Explore More</h2>
+      <ul>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Success Stories</a></li>
+      </ul>
+    </section>
   </main>
-  <footer>
-    © My Work Exchange Platform 2024
+  <footer class="center">
+    &copy; My Work Exchange Platform 2024
   </footer>
 </body>
 </html>
